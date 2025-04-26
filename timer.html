@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height:100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #box{
+            width: 300px;
+            height: 180px;
+            background-color: orange;
+            border-radius: 20px;
+            text-align: center;
+            padding: 30px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1 style="color:white">your timer</h1>
+  <div id="box">
+    <input type="text" id="inp">
+    <h1 id="h">Here you go</h1>
+    <button onclick="run()">start</button>
+</div>
+    <script>
+        function run(){
+        let num= document.getElementById("inp").value
+        function add(){
+         if(num>=0){
+         document.getElementById("h").innerHTML=num
+         let h1ele= document.getElementById("h")
+         h1ele.style.backgroundColor="lightblue"
+         h1ele.style.width="50px"
+         h1ele.style.height="50px"
+         h1ele.style.borderRadius="50%"
+         h1ele.style.textAlign="center"
+         h1ele.style.marginLeft="120px"
+
+         num--
+            }else{
+                clearInterval(n)
+              let a=  document.getElementById("h").innerHTML="time's up"
+              
+             let h1ele= document.getElementById("h")
+             h1ele.style.backgroundColor=""
+             h1ele.style.width=""
+             h1ele.style.height=""
+             h1ele.style.borderRadius=""
+             h1ele.style.textAlign=""
+             h1ele.style.marginLeft=""
+
+            }  
+           
+        }
+         document.getElementById("inp").value=""
+       let n= setInterval(add,1000)
+    }
+    </script>
+</body>
+</html>
