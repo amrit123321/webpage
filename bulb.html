@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+           height:100vh;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+        }
+        #on{
+            width:150px ;
+            height:150px ;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+   <div id="on"></div><br>
+   <div>
+   <button id="On" onclick="main()">Switch on</button>
+   <button id="off" onclick="add()">switch off</button> 
+</div>
+   <script>
+   
+    function main(){
+     
+      
+        let b=document.getElementById("on")
+    b.style.backgroundColor=" red"
+    b.style.boxShadow="0 0 150px red"
+   
+    b.innerHTML="Bulb is on"
+    b.style.textAlign="center"
+    b.style.margin="50px"
+
+    }
+function add(){
+   
+      
+        let b=document.getElementById("on")
+    b.style.backgroundColor=" white"
+    b.style.boxShadow=""
+ 
+    b.innerHTML=""
+    b.style.textAlign=""
+    b.style.margin=""
+
+}
+   </script>
+</body>
+</html>
